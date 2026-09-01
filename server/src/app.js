@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(pinoHttp({ logger }));
 
 const authRoutes = require('./routes/authRoutes');
+const noteRoutes = require('./routes/noteRoutes');
 
 // Basic route for testing
 app.get('/', (req, res) => {
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/notes', noteRoutes);
 
 // Global Error Handler
 app.use(errorHandler);
