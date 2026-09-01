@@ -1,0 +1,169 @@
+.editor-layout {
+  min-height: 100vh;
+  background: #0f0f1a;
+}
+
+.editor-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.editor-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cancel,
+.btn-save {
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: auto;
+}
+
+.btn-cancel {
+  background: #2d3748;
+  color: #9ca3af;
+  border: 1px solid #4a5568;
+}
+
+.btn-cancel:hover {
+  background: #4a5568;
+  color: #e0e0e0;
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #4a9eff, #6c63ff);
+  color: #fff;
+  border: none;
+}
+
+.btn-save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+}
+
+.btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.editor-title-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #1e1e2f;
+  border: 1px solid #2d2d44;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 18px;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.editor-title-input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.editor-title-input::placeholder {
+  color: #6b7280;
+}
+
+.editor-quill-wrapper {
+  background: #1e1e2f;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2d2d44;
+}
+
+/* Quill editor dark theme overrides */
+.editor-quill-wrapper .ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #2d2d44 !important;
+  background: #16162a;
+}
+
+.editor-quill-wrapper .ql-toolbar .ql-stroke {
+  stroke: #9ca3af !important;
+}
+
+.editor-quill-wrapper .ql-toolbar .ql-fill {
+  fill: #9ca3af !important;
+}
+
+.editor-quill-wrapper .ql-toolbar .ql-picker-label {
+  color: #9ca3af !important;
+}
+
+.editor-quill-wrapper .ql-toolbar button:hover .ql-stroke,
+.editor-quill-wrapper .ql-toolbar .ql-picker-label:hover {
+  stroke: #4a9eff !important;
+  color: #4a9eff !important;
+}
+
+.editor-quill-wrapper .ql-container {
+  border: none !important;
+  min-height: 350px;
+  font-size: 15px;
+}
+
+.editor-quill-wrapper .ql-editor {
+  color: #d1d5db;
+  min-height: 350px;
+  line-height: 1.7;
+}
+
+.editor-quill-wrapper .ql-editor.ql-blank::before {
+  color: #6b7280;
+  font-style: normal;
+}
+
+.editor-loading {
+  text-align: center;
+  padding: 80px 0;
+  color: #9ca3af;
+}
+
+@media (max-width: 640px) {
+  .editor-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .editor-actions {
+    justify-content: stretch;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    flex: 1;
+  }
+}

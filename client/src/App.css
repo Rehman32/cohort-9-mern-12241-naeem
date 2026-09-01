@@ -1,60 +1,99 @@
+.App {
+  min-height: 100vh;
+}
+
+/* Auth pages styling */
 .auth-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background-color: #fff;
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 36px;
+  border-radius: 12px;
+  background: #1e1e2f;
+  border: 1px solid #2d2d44;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .auth-container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  color: #e0e0e0;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   text-align: left;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #a0aec0;
+  font-size: 14px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px 14px;
+  background: #16162a;
+  border: 1px solid #2d2d44;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
   box-sizing: border-box;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+.form-group input:focus {
+  outline: none;
+  border-color: #4a9eff;
 }
 
-button:disabled {
-  background-color: #a0c4ff;
+.form-group input::placeholder {
+  color: #6b7280;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #4a9eff, #6c63ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  margin-top: 6px;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .error-message {
-  color: #721c24;
-  background-color: #f8d7da;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.12);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border: 1px solid rgba(231, 76, 60, 0.25);
 }
 
-p {
+.auth-container p {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
+  color: #9ca3af;
+  font-size: 14px;
 }

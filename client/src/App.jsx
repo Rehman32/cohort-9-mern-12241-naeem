@@ -2,6 +2,8 @@ import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './components/Login'
 import Signup from './components/Signup'
+import Dashboard from './pages/Dashboard'
+import NoteEditor from './pages/NoteEditor'
 import { useAuth } from './context/AuthContext'
 import './App.css'
 
@@ -18,9 +20,12 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={
           <PrivateRoute>
-            <div>
-              <h2>Dashboard (Coming Soon)</h2>
-            </div>
+            <Dashboard />
+          </PrivateRoute>
+        } />
+        <Route path="/editor/:id" element={
+          <PrivateRoute>
+            <NoteEditor />
           </PrivateRoute>
         } />
         <Route path="*" element={<Navigate to="/login" />} />
