@@ -14,10 +14,15 @@ app.use(express.urlencoded({ extended: true }));
 // Request logging using pino-http
 app.use(pinoHttp({ logger }));
 
+const authRoutes = require('./routes/authRoutes');
+
 // Basic route for testing
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the Notes App API' });
 });
+
+// Routes
+app.use('/api/auth', authRoutes);
 
 // Global Error Handler
 app.use(errorHandler);
