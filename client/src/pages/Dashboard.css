@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .dashboard-header h1 {
@@ -41,6 +41,93 @@
   box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
 }
 
+/* Search & Sort Toolbar */
+.dashboard-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #1e1e2f;
+  border: 1px solid #2d2d44;
+  border-radius: 8px;
+  padding: 0 14px;
+  transition: border-color 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #4a9eff;
+}
+
+.search-icon {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 11px 0;
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #6b7280;
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  width: auto;
+}
+
+.search-clear:hover {
+  color: #e0e0e0;
+  background: #2d3748;
+}
+
+.sort-select {
+  padding: 11px 14px;
+  background: #1e1e2f;
+  border: 1px solid #2d2d44;
+  border-radius: 8px;
+  color: #a0aec0;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.sort-select:focus {
+  border-color: #4a9eff;
+}
+
+.sort-select option {
+  background: #1e1e2f;
+  color: #e0e0e0;
+}
+
+.search-results-count {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* Notes Grid */
 .notes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -104,6 +191,10 @@
     flex-direction: column;
     gap: 16px;
     align-items: stretch;
+  }
+
+  .dashboard-toolbar {
+    flex-direction: column;
   }
 
   .notes-grid {

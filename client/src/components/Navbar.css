@@ -36,12 +36,25 @@
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
-.navbar-user {
+.btn-profile {
+  padding: 8px 16px;
+  background: #2d3748;
+  border: 1px solid #4a5568;
   color: #a0aec0;
+  border-radius: 6px;
+  cursor: pointer;
   font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: auto;
+}
+
+.btn-profile:hover {
+  background: #4a5568;
+  color: #e0e0e0;
 }
 
 .btn-logout {
@@ -60,4 +73,20 @@
 .btn-logout:hover {
   background: #e74c3c;
   color: #fff;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .navbar-title {
+    font-size: 16px;
+  }
+
+  .btn-profile,
+  .btn-logout {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }

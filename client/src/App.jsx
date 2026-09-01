@@ -4,6 +4,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Dashboard from './pages/Dashboard'
 import NoteEditor from './pages/NoteEditor'
+import Profile from './pages/Profile'
 import { useAuth } from './context/AuthContext'
 import './App.css'
 
@@ -26,6 +27,11 @@ function App() {
         <Route path="/editor/:id" element={
           <PrivateRoute>
             <NoteEditor />
+          </PrivateRoute>
+        } />
+        <Route path="/profile" element={
+          <PrivateRoute>
+            <Profile />
           </PrivateRoute>
         } />
         <Route path="*" element={<Navigate to="/login" />} />

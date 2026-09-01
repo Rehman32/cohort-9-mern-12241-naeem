@@ -19,7 +19,9 @@ const Navbar = () => {
         <span className="navbar-title">Notes App</span>
       </div>
       <div className="navbar-actions">
-        <span className="navbar-user">Welcome, {user?.username}</span>
+        <button className="btn-profile" onClick={() => navigate('/profile')}>
+          👤 {user?.username}
+        </button>
         <button className="btn-logout" onClick={handleLogout}>
           Logout
         </button>
